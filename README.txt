@@ -22,3 +22,20 @@ https://www.npmjs.com/package/hbs
   Make nodemon watch for hbs files too
 ==========================================
 nodemon server.js -e js,hbs
+
+
+
+==========================================
+  Using heroku
+==========================================
+
+1. Go here https://toolbelt.heroku.com
+2. Download heroku toolbelt for your platform and install it
+3. Login with heroku
+    > heroku login
+4. Add your SSH key
+    > heroku key:add
+5. Test the connection to heroku
+    > ssh -v git@heroku.com
+6. Inside package.json specify a "start" script (i.e. a command to be run from the terminal)
+    - see package.json for this "start" script line

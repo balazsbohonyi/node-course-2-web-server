@@ -2,6 +2,10 @@ const express = require('express'); // Express JS
 const hbs = require('hbs');         // handlebars.js wrapper for Express JS
 const fs = require('fs');
 
+// the PORT environment variable below is set by heroku
+// since on a local installation of this app the PORT environment varialbe might
+// not be set a fallback port number was also added for local development
+const port = process.env.PORT || 8080;
 var app = express();
 
 /*************************************************************
@@ -116,6 +120,6 @@ app.get('/bad', (req, res) => {
   })
 });
 
-app.listen(8080, () => {
-  console.log('Server is up on port 8080.');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}.`);
 });
